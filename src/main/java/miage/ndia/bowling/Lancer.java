@@ -15,4 +15,8 @@ public class Lancer {
     public void setQuilles(int quilles) {
         this.quilles = quilles;
     }
+
+    public boolean isValide() {
+        return (quilles > 0 && quilles < 11);
+    }
 }
