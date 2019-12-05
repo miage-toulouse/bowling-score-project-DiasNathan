@@ -49,4 +49,29 @@ public class JeuTest {
         assertFalse("Le jeu n'est pas sensé être valide", valide);
     }
 
+    @Test
+    public void testIsValideFauxScoreInvalide(){
+        this.j.setLancer1(new Lancer(6));
+        this.j.setLancer2(new Lancer(6));
+        boolean valide = this.j.isValide();
+        assertFalse("Le jeu n'est pas sensé être valide", valide);
+    }
+
+    @Test
+    public void testIsValideFauxLancerNull(){
+        this.j.setLancer1(null);
+        boolean valide = this.j.isValide();
+        assertFalse("Le jeu n'est pas sensé être valide", valide);
+    }
+
+    @Test
+    public void testIsSpare(){
+
+    }
+
+    @Test
+    public void testIsStrike(){
+
+    }
+
 }
